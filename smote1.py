@@ -113,5 +113,5 @@ for i in range(len(example)):
     for j in range(len(example[i])):
         sheet.write(i, j, example[i][j])
 
-workbook.save("smote.xlsx")
+workbook.save("smote.xls")
 
