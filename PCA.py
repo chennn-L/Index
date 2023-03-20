@@ -6,6 +6,7 @@ import numpy as np
 ##导入PCA库
 from sklearn.decomposition import PCA
 plt.switch_backend('agg')
+# # 对smote过采样后的数据进行降维可视化
 # smote=np.load("smote_test.npy")    #用于PCA降维
 # smote_reshape=smote.reshape(186,1*13698)
 
@@ -19,6 +20,7 @@ plt.switch_backend('agg')
 # #保存散点图
 # plt.savefig("./smote_after.jpg")
 
+# # 对pos_data数据进行降维可视化
 smote=np.load("pos_data.npy")    #用于PCA降维
 smote_reshape=smote.reshape(93,1*13698)
 
