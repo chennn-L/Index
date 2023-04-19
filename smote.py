@@ -95,7 +95,7 @@ def excel2matrix(path):
         datamatrix[:, i] = cols
     return datamatrix
 
-pathX = 'pos_data.xlsx' 
+pathX = 'train_data.xlsx' 
 matrix = excel2matrix(pathX) #把xlsx文件转成数组
 # print(type(matrix))
 samples = matrix.transpose() #数组转置
@@ -105,7 +105,7 @@ synthetic_points = smote.fit(samples)
 print(synthetic_points)
 # print(synthetic_points.shape)
 example = synthetic_points.transpose() #数组转置
-np.save('smote_test.npy',example)
+np.save('smote_train.npy',example)
 workbook = xlwt.Workbook()
 sheet = workbook.add_sheet("Sheet")
 
@@ -113,5 +113,5 @@ for i in range(len(example)):
     for j in range(len(example[i])):
         sheet.write(i, j, example[i][j])
 
-workbook.save("smote.xls")
+workbook.save("smote_train.xls")
 
