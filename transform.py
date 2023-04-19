@@ -13,6 +13,6 @@ def excel2matrix(path):
         datamatrix[:, i] = cols
     return datamatrix
 
-pathX = 'pos_data.xlsx' 
+pathX = 'smote_train.xls' 
 matrix = excel2matrix(pathX)
-np.save('pos_data.npy',matrix)
+np.save('smote_train_data.npy',matrix)
